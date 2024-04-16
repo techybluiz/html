@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://twillcms.com" target="_blank"><img src="docs/_templates/assets/twill_cms_logo_white.png" width="400"></a>
+    <a href="https://wallpapers.com/images/hd/nba-logo-3840-x-2400-m54hudw7ky3u000c.jpg" width="400"></a>
 </p>
 <p align="center">
     <img alt="Packagist PHP Version" src="https://img.shields.io/packagist/dependency-v/area17/twill/php">  
