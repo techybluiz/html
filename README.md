@@ -1,4 +1,4 @@
-# NBA Info Website
+# NBA Info Website (Em construção)
 
 Este é um site simples sobre a NBA, que inclui informações sobre jogadores, times e arenas.
 
