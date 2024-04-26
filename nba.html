@@ -1,84 +1,103 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width">
-        <title>NBA - INFORMAÇÕES</title>
-        <style>
-            .player-info {
-                display: inline-block;
-                vertical-align: top;
-                width: calc(100% - 150px); 
-                margin-right: 20px;
-            }
-            body {
-                background-color: whitesmoke;
-            }
-            h2{
-                background-color:rgb(59, 100, 212);
-            }
-            h3{
-                background-position: 50;
-            }
-            img{
-               height: 120; width: 100;
-            }
-            .player-img {
-                display: inline-block;
-                width: 300;
-                vertical-align: top;
-            }
-            .clear {
-                clear: both;
-            }
-        </style>
-    </head>
-    <body>
-        <p>Bem vindo(a)! Aqui você encontra tudo sobre o campeonato da NBA.</p>
-        <h2 id="NBA Info" class="NBA Info">
-            NBA Informações 
-        </h2>
-        <h4 id="exemplo" class="NBA">
-        <img class="player-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfJwOv8grDmfmJOD8DB0N5Ni7CJc-19VQjkw&s" alt="NBA GAMES">
-    </h4>
-    <a href="https://www.nba.com/"
-    target="_blank">Site Oficial</a>
-    <hr> 
-        <h3>Everything about<b class="bold"> NBA</b>.</h3>
-        <p>The history</p>
-        <p>The NBA (National Basketball Association) is the premier professional basketball league in the world. 
-            Founded in 1946, the league has grown to become a global phenomenon, attracting millions of fans worldwide. 
-            Known for its high-flying dunks, spectacular plays, and intense competition, the NBA showcases some of the most talented 
-            athletes in the sport.<br> With teams spanning across the United States and Canada, the NBA season culminates in the NBA Finals, 
-            where the top teams compete for the championship title. Beyond the court, the NBA is also recognized for its social impact 
-            initiatives, community outreach programs, and commitment to diversity and inclusion. Overall, the NBA continues to captivate 
-            audiences with its electrifying action and unparalleled entertainment.</p>
-            <blockquote><h1>Teams</h2></blockquote>
-                <li>Los Angeles Lakers</li>
-                <li>Boston Celtics</li>
-                <li>Chicago Bulls</li>
-                <li>Golden State Warriors</li>
-                <li>Miami Heat</li>
-                <li>San Antonio Spurs</li>
-                <li>Houston Rockets</li>
-                <li>Philadelphia 76ers</li>
-                <li>Los Angeles Clippers</li>
-                <li>Toronto Raptors</li>
-    <blockquote> <i>Players</i></blockquote>
-    <strong> 20 Jogadores que se destacaram no ano de 2022</strong> <br>
-     <br>
-       <li> <b> 20 - Bradley Beal, Washington Wizards </b> </li> <br>
-        <img class="player-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFObQCswrA1kOHcz4wqGBkyU9GcTkuY0fkYg&s" alt="20 - Bradley Beal, Washington Wizards"width=275 height=183>
-        <li> <b> 19 - Paul George, Los Angeles Clippers </b> </li> <br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Info</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        } 
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+        }
+        nav ul li a:hover {
+            background-color: #eee;
+        }
+        main {
+            padding: 20px;
+        }
+        .intro {
+            text-align: center;
+        }
+        .linha {
+            width: 100%;
+            height: 100px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRztgTGgmJAZMtlMgbpdpxAEr_VS4-pXsXmrA&s');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NBA Info</h1>
+    </header>
+    <nav>
         <ul>
-            <li>
-              <b>1 - Giannis Antetokounmpo, Milwaukee Bucks</b>
-              <div class="player-info">
-                <p>Giannis Sina Ugo Antetokounmpo é um jogador greco-nigeriano profissional de basquetebol que atualmente joga pelo Milwaukee Bucks da National Basketball Association. Nascido na Grécia de pais nigerianos, Antetokounmpo começou a jogar basquete nas equipes juvenis do Filathlitikos em Atenas.</p>
-              </div>
-              <img class="player-img" src="data:image/jpeg;base64,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" alt="">
-              <div class="clear"></div>
-            </li>
-          </ul>
-    </body>
+            <li><a href="file:///C:/Users/Bianca/Nova%20pasta/html.html">Home</a></li>
+            <li><a href="file:///C:/Users/Bianca/cod.%20html%20css/teams.html">Teams</a></li>
+            <li><a href="file:///C:/Users/Bianca/Nova%20pasta/players.html">Players</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="intro">
+            <h2>Welcome to NBA Info!</h2>
+            <p>This website provides information about NBA teams and players.</p>
+        </section>
+        <H2>NBA History</H2>
+
+        <p>The NBA, or National Basketball Association, has a rich and storied history that dates back to its founding in 1946. Here's a brief overview of the NBA's history:
+            <p> </p>
+            The NBA was established on June 6, 1946, as the Basketball Association of America (BAA). The league initially consisted of 11 teams and aimed to promote and organize professional basketball in North America. The inaugural season saw the Philadelphia Warriors emerge as the champions.<br>
+            <p> </p>
+            In 1949, the BAA merged with the rival National Basketball League (NBL) to form the National Basketball Association (NBA). This merger brought together the best teams and players from both leagues, solidifying the NBA's position as the premier professional basketball league in the United States.<br>
+            <p> </p>
+            Throughout the 1950s and 1960s, the NBA saw the rise of iconic players such as Bill Russell, Wilt Chamberlain, and Jerry West. The Boston Celtics, under the leadership of Russell, dominated the era, winning 11 championships in 13 seasons between 1957 and 1969.<br>
+            <p> </p>
+            The 1970s ushered in a new era of competitiveness in the NBA, with teams like the Los Angeles Lakers, New York Knicks, and Milwaukee Bucks emerging as contenders. This decade also witnessed the arrival of transcendent talents like Kareem Abdul-Jabbar, Julius Erving, and Magic Johnson.<br>
+            <p> </p>
+            The 1980s are often regarded as the golden age of the NBA, characterized by fierce rivalries, high-scoring games, and global expansion. The rivalry between Larry Bird's Boston Celtics and Magic Johnson's Los Angeles Lakers captivated audiences worldwide, while Michael Jordan emerged as a generational talent with the Chicago Bulls.<br>
+            <p> </p>
+            The 1990s saw the NBA's popularity reach new heights, fueled by Jordan's dominance and the emergence of other superstar players like Shaquille O'Neal, Hakeem Olajuwon, and Karl Malone. The Bulls' six championships in the decade solidified Jordan's status as one of the greatest basketball players of all time.<br>
+            <p> </p>
+            In the early 2000s, the NBA faced challenges such as declining TV ratings and a series of player controversies. However, the league rebounded with the rise of new superstars like Kobe Bryant, Tim Duncan, and LeBron James, who helped usher in a new era of global popularity for the NBA.<br>
+            <p> </p>
+            Today, the NBA stands as one of the most popular and profitable sports leagues in the world, with a global fan base, lucrative television deals, and a commitment to social justice initiatives. The league continues to evolve, embracing technology, innovation, and diversity while honoring its rich history and tradition.<br>
+            </p>
+
+            <div class="linha"></div>
+
+            <h3>Historic moments in the NBA</h3>
+
+            <h4>During the 1950s and 1960s, the Boston Celtics, led by Bill Russell, dominated the NBA, winning 11 titles in 13 seasons, including a record run of eight consecutive titles between 1959 and 1966.</h4>
+        <video width="640" height="360" controls autoplay>
+                <source src="https://www.google.com/search?q=Funda%C3%A7%C3%A3o+da+NBA&sca_esv=9a46615aa720b818&rlz=1C1ONGR_pt-PTBR1094BR1094&biw=678&bih=605&tbm=vid&prmd=invsbmtz&sxsrf=ACQVn0_sF3nS31N0qZVS4KuLJsr6FJJC7w:1714158911328&source=lnms&sa=X&ved=2ahUKEwjHz_3Hy-CFAxUhLbkGHQF9BUwQ0pQJegQIBhAI#" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </main>
+    <footer>
+        <p>&copy; 2024 NBA Info</p>
+    </footer>
+</body>
 </html>
